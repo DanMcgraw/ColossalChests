@@ -16,7 +16,7 @@ public @interface ChestContainer {
     boolean showButtons() default true;
 
     // Size of a chest row
-    int rowSize() default 9;
+    int rowSize() default 18;
 
     // Uses 'large chest' mode for sorting buttons
     // (Renders buttons vertically down the right side of the GUI)

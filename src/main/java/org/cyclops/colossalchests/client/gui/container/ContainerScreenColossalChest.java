@@ -14,6 +14,7 @@ import org.cyclops.colossalchests.ColossalChests;
 import org.cyclops.colossalchests.Reference;
 import org.cyclops.colossalchests.inventory.container.ContainerColossalChest;
 import org.cyclops.colossalchests.network.packet.ClickWindowPacketOverride;
+import org.cyclops.cyclopscore.client.gui.component.WidgetScrollBar;
 import org.cyclops.cyclopscore.client.gui.component.button.ButtonArrow;
 import org.cyclops.cyclopscore.client.gui.container.ContainerScreenScrolling;
 import org.cyclops.cyclopscore.helper.L10NHelpers;
@@ -25,8 +26,9 @@ import org.cyclops.cyclopscore.helper.L10NHelpers;
  */
 public class ContainerScreenColossalChest extends ContainerScreenScrolling<ContainerColossalChest> {
 
-    private static final int TEXTUREWIDTH = 195;
-    private static final int TEXTUREHEIGHT = 194;
+    private static final int TEXTUREWIDTH = 240;
+    private static final int TEXTUREHEIGHT = 255;
+    private WidgetScrollBar scrollbar2;
 
     public ContainerScreenColossalChest(ContainerColossalChest container, PlayerInventory inventory, ITextComponent title) {
         super(container, inventory, title);
@@ -35,8 +37,8 @@ public class ContainerScreenColossalChest extends ContainerScreenScrolling<Conta
     @Override
     public void init() {
         super.init();
-        addButton(new ButtonArrow(this.guiLeft + 173, this.guiTop + 7, new TranslationTextComponent("gui.cyclopscore.up"), (button) -> scrollRelative(1), ButtonArrow.Direction.NORTH));
-        addButton(new ButtonArrow(this.guiLeft + 173, this.guiTop + 129, new TranslationTextComponent("gui.cyclopscore.down"), (button) -> scrollRelative(-1), ButtonArrow.Direction.SOUTH));
+        addButton(new ButtonArrow(this.guiLeft + 242, this.guiTop + 7, new TranslationTextComponent("gui.cyclopscore.up"), (button) -> scrollRelative(1), ButtonArrow.Direction.NORTH));
+        addButton(new ButtonArrow(this.guiLeft + 242, this.guiTop + 164, new TranslationTextComponent("gui.cyclopscore.down"), (button) -> scrollRelative(-1), ButtonArrow.Direction.SOUTH));
     }
 
     protected void scrollRelative(int direction) {
@@ -70,7 +72,7 @@ public class ContainerScreenColossalChest extends ContainerScreenScrolling<Conta
     }
 
     protected void drawForgegroundString(MatrixStack matrixStack) {
-        font.drawString(matrixStack, getTitle().getString(), 8 + offsetX, 6 + offsetY, 4210752);
+        font.drawString(matrixStack, getTitle().getString(), 8 + offsetX, 0 + offsetY, 4210752);
     }
 
     @Override

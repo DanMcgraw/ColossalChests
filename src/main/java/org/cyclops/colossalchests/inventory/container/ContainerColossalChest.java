@@ -48,19 +48,19 @@ import java.util.Map;
 @ChestContainer(isLargeChest = true)
 public class ContainerColossalChest extends ScrollingInventoryContainer<Slot> {
 
-    private static final int INVENTORY_OFFSET_X = 9;
-    private static final int INVENTORY_OFFSET_Y = 112;
+    private static final int INVENTORY_OFFSET_X = 39;
+    private static final int INVENTORY_OFFSET_Y = 174;
 
-    private static final int CHEST_INVENTORY_OFFSET_X = 9;
-    private static final int CHEST_INVENTORY_OFFSET_Y = 18;
+    private static final int CHEST_INVENTORY_OFFSET_X = 12;
+    private static final int CHEST_INVENTORY_OFFSET_Y = 8;
     /**
      * Amount of visible rows in the chest.
      */
-    public static final int CHEST_INVENTORY_ROWS = 5;
+    public static final int CHEST_INVENTORY_ROWS = 9;
     /**
      * Amount of columns in the chest.
      */
-    public static final int CHEST_INVENTORY_COLUMNS = 9;
+    public static final int CHEST_INVENTORY_COLUMNS = 12;
 
 
     private final List<Slot> chestSlots;

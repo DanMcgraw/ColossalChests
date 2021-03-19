@@ -11,6 +11,7 @@ doc/info.txt
 .pydevproject
 eclipse/*
 .gradle/*
+.idea/*
 repo/*
 *.iml
 *.ipr
